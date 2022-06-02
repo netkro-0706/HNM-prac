@@ -11,8 +11,7 @@ const ProductAll = () => {
   const getProducts = async () => {
     let searchQuery = query.get("q") || "";
     console.log("쿼리 값", searchQuery);
-    let url = `https://my-json-server.typicode.com/netkro-0706/
-    HNM-prac/products?q=${searchQuery}`;
+    let url = `https://my-json-server.typicode.com/netkro-0706/HNM-prac/products?q=${searchQuery}`;
     let response = await fetch(url);
     let data = await response.json();
     console.log(data);

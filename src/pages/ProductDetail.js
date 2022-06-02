@@ -9,8 +9,7 @@ const ProductDetail = () => {
   console.log("id", id);
 
   const getProductDetail = async () => {
-    let url = `https://my-json-server.typicode.com/netkro-0706/
-    HNM-prac/products/${id}`;
+    let url = `https://my-json-server.typicode.com/netkro-0706/HNM-prac/products/${id}`;
     let response = await fetch(url);
     let data = await response.json();
     console.log("data : ", data);
