@@ -1,0 +1,114 @@
+.login-wrap{
+  display: flex;
+  justify-content: flex-end;
+}
+.login-button{
+  width: 100px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.login-button *{
+  float: left;
+  padding-right: 10px;
+}
+.login-Icon{
+  padding-top: 4px;
+}
+
+.nav-section{
+  display: flex;
+  justify-content: center;
+}
+.nav-section img{
+  width: 180px;
+  margin-bottom: 30px;
+}
+.nav-section img:hover{
+  cursor: pointer;
+}
+
+.menu-area{
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.menu-area-off{
+  display: none;
+  margin: 10px 15px;
+}
+.menu-area-off:hover{
+  cursor: pointer;
+}
+
+.menu-list{
+  display: flex;
+  list-style: none;
+}
+.menu-list li{
+  padding: 10px;
+}
+.canvas-off{
+  width: 250px !important;
+  background-color: antiquewhite !important;
+}
+.menu-off{
+  display: inline;
+  text-align: center; 
+}
+
+.menu-search-wrap{
+  position: absolute;
+  right: 30px;
+  height: 32px;
+  margin-top: 6px;
+  border-bottom: 1px solid black;
+}
+.menu-search{
+  font-size: 14px;
+  height: 30px;
+  width: 120px;
+  border: none;
+  margin-left: 5px;
+}
+.menu-search:focus{
+  outline: none;
+}
+
+.card-wrap{
+  margin: 10px;
+}
+.card-wrap:hover{
+  transform: scale(1.07);
+}
+
+.login-form{
+  margin: auto;
+  width: 400px;
+}
+
+.product-img{
+  display: flex;
+  justify-content: flex-end;
+}
+.product-info div{
+  margin-bottom: 5px;
+}
+
+@media (max-width: 991.20px){
+  .login-wrap{
+    display: flex;
+    justify-content: space-between;
+  }
+  .menu-area{
+    display: none;
+  }
+  .menu-area-off{
+    display: block;
+  }
+  .card-wrap{
+    margin: 15px 10px;
+  }
+  .card-wrap:hover{
+    transform: scale(1.05);
+  }
+}
