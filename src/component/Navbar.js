@@ -5,8 +5,10 @@ import { faSearch, faBars } from '@fortawesome/free-solid-svg-icons';
 import { useNavigate } from 'react-router-dom';
 import { Offcanvas } from 'react-bootstrap';
 import { useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { authenticateAction } from '../redux/actions/authenticateAction';
 
-const Navbar = ({ authenticate, setAuthenticate }) => {
+const Navbar = () => {
     const menuList = [
         "여성",
         "Divided",
@@ -20,7 +22,8 @@ const Navbar = ({ authenticate, setAuthenticate }) => {
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-
+    const authenticate = useSelector((state)=>state.auth.authenticate);
+    const dispatch = useDispatch();
 
     const navigate = useNavigate();
 
@@ -28,7 +31,8 @@ const Navbar = ({ authenticate, setAuthenticate }) => {
         navigate("/login");
     }
     const goToLogout = () => {
-        setAuthenticate(false);
+        console.log("nav logout");
+        dispatch(authenticateAction.logout());
         navigate("/");
     }
     const goToMain = () => {

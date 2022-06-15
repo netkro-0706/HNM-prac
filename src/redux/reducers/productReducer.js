@@ -1,5 +1,6 @@
 let initialState = {
-    productList: []
+    productList: [],
+    productDetail: null,
 }
 
 function productReducer(state = initialState, action) {
@@ -9,6 +10,11 @@ function productReducer(state = initialState, action) {
             return {
                 ...state,
                 productList: payload.data
+            }
+        case "GET_PRODUCT_DETAIL":
+            return {
+                ...state,
+                productDetail: payload.data
             }
         default:
             return {

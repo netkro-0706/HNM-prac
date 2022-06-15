@@ -94,6 +94,12 @@
   margin-bottom: 5px;
 }
 
+.loader-wrap{
+  text-align: center;
+  height: 70vh;
+  padding-top: 100px;
+}
+
 @media (max-width: 991.20px){
   .login-wrap{
     display: flex;
