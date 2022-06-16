@@ -1,3 +1,6 @@
+import { loadingAction } from "./loadingAction";
+
+
 function getProducts(searchQuery) {
     return async (dispatch, getState) => {
         let url = `https://my-json-server.typicode.com/netkro-0706/HNM-prac/products?q=${searchQuery}`;
@@ -9,11 +12,13 @@ function getProducts(searchQuery) {
 
 function getProductDetail(id) {
     return async (dispatch, getState) => {
+        dispatch(loadingAction.loadOn());
         let url = `https://my-json-server.typicode.com/netkro-0706/HNM-prac/products/${id}`;
         let response = await fetch(url);
         let data = await response.json();
         console.log("product detail", data);
         dispatch({type: "GET_PRODUCT_DETAIL", payload: {data}});
+        dispatch(loadingAction.loadOut());
     }
 }
 
